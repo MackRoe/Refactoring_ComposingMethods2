@@ -6,13 +6,28 @@ pickle = 20  # [gr]
 tomatoes = 25  # [gr]
 lettuce = 15  # [gr]
 buns = 95  # [gr]
-sandwich_weight = (2 * patty + 4 * pickle + 3 * tomatoes + 2 * lettuce
-                   + 2 * buns)
-print("NY Burger Weight", sandwich_weight)
 kimchi = 30  # [gr]
 mayo = 5  # [gr]
 golden_fried_onion = 20  # [gr]
-sandwich_weight = (2 * patty + 4 * pickle + 3 * tomatoes 
-                + kimchi + mayo + golden_fried_onion + 2 * buns)
-print("Seoul Kimchi Burger Weight", sandwich_weight)
 
+ny_burger = {patty: 2, pickle: 4, tomato: 3, lettuce: 1, buns: 2}
+
+seoul_kimchi_burger = {
+    patty: 2,
+    pickle: 4,
+    tomatoes: 3,
+    kimchi: 1,
+    mayo: 1,
+    golden_fried_onion: 1,
+    buns: 2}
+
+
+def build_that_burger(burger_type):
+    weight = 0
+    for ingredient, amount in burger_type:
+        weight += (ingredient * amount)
+    return weight
+
+
+print("NY Burger Weight", build_that_burger(ny_burger))
+print("Seoul Kimchi Burger Weight ", build_that_burger(seoul_kimchi_burger))
