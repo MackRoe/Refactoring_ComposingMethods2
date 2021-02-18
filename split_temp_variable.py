@@ -1,5 +1,6 @@
-# by Kami Bigdely
+# Starter Code by Kami Bigdely
 # Split temporary variable
+# Refactor by Laine (Music)
 
 patty = 70  # [gr]
 pickle = 20  # [gr]
